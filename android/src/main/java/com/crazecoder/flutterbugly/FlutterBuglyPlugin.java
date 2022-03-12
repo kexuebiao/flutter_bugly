@@ -165,11 +165,7 @@ public class FlutterBuglyPlugin implements FlutterPlugin, MethodCallHandler, Act
             if (call.hasArgument("msg")) {
                 msg = call.argument("msg");
             }
-            BuglyLog.i(tag, msg + "-info");
-            BuglyLog.v(tag, msg + "-v");
-            BuglyLog.d(tag, msg + "-d");
-            BuglyLog.e(tag, msg + "-e");
-            Log.e(tag, "onMethodCall: ");
+            BuglyLog.d(tag, msg);
             result(null);
         } else {
             result.notImplemented();
